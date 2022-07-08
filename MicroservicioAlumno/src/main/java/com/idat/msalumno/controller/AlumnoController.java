@@ -33,19 +33,19 @@ public class AlumnoController {
     }
 
     @PostMapping("/guardar")
-    public void guardarAlumno(@RequestBody Alumno alumno) {
+    public @ResponseBody void guardarAlumno(@RequestBody Alumno alumno) {
 
         alumnoService.guardarAlumno(alumno);
     }
 
     @PutMapping("/actualizar")
-    public void actualizarAlumno(@RequestBody Alumno alumno) {
+    public @ResponseBody void actualizarAlumno(@RequestBody Alumno alumno) {
 
         alumnoService.actualizarAlumno(alumno);
     }
 
     @DeleteMapping("/eliminar/{id}")
-    public void eliminarAlumno(@PathVariable Integer id) {
+    public @ResponseBody void eliminarAlumno(@PathVariable Integer id) {
 
         alumnoService.eliminarAlumno(id);
     }
